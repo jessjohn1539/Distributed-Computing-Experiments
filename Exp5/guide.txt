@@ -1,0 +1,33 @@
+Experiment 5: Election Algorithm (Bully Algorithm)
+
+📌 Concept Notes:
+- Bully Algorithm helps in choosing a new coordinator if the current one fails.
+- Each process has a unique ID. Higher ID = higher priority.
+- Initiator sends election messages to higher IDs.
+- The highest active process becomes the new coordinator.
+
+🧪 Flow of the Program:
+1. Create 5 processes with IDs 0 to 4, all active.
+2. Randomly fail one process (simulate crash).
+3. Process 2 starts the election.
+4. Each active process with a higher ID responds and takes over the election.
+5. The highest active process is selected as coordinator.
+6. Coordinator sends message to all active processes.
+
+⚙️ Commands to Compile and Run:
+1. Save the file as: BullyElection.java
+2. Compile:
+   javac BullyElection.java
+3. Run:
+   java BullyElection
+
+💡 Example Output:
+Process 3 has failed.
+
+Process 2 initiates election...
+Process 4 responds to election message.
+
+Process 4 is elected as Coordinator.
+Process 0 acknowledges coordinator 4
+Process 1 acknowledges coordinator 4
+Process 2 acknowledges coordinator 4
