@@ -1,0 +1,43 @@
+Experiment 8: Program to demonstrate Load Balancing Algorithm in Java
+
+🔖 Concept Notes: Round-Robin Load Balancing
+Objective: Distribute incoming requests evenly across multiple servers in a cyclic fashion.
+
+Round-Robin Algorithm:
+Maintains a circular index (serverIndex) to assign each request to the next server.
+Once the end of the server list is reached, it wraps around to the beginning.
+This approach is simple, fair, and ensures that all servers get a balanced load over time.
+
+🧪 Practical Steps to Compile and Run
+
+javac RoundRobinLoadBalancer.java
+java RoundRobinLoadBalancer
+
+4. Sample Input:
+Enter number of servers:
+3
+Enter server names:
+server1
+server2
+server3
+Enter number of requests:
+5
+Enter request names:
+requestA
+requestB
+requestC
+requestD
+requestE
+
+5. Sample Output:
+Request Assignments:
+requestA -> server1
+requestB -> server2
+requestC -> server3
+requestD -> server1
+requestE -> server2
+
+📝 Simple Explanation
+This Java program uses a round-robin strategy to assign each incoming request to a server. 
+By using a rotating index, it ensures that servers are used in order and reused evenly. It’s ideal for visualizing how simple load balancing works in distributed systems.
+

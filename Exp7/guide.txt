@@ -1,0 +1,28 @@
+Experiment 7: Program to demonstrate Deadlock Management in Distributed Systems
+
+🧠 Concept Notes:
+- Deadlock occurs when a group of processes are waiting on each other in a circular chain.
+- A Wait-For Graph (WFG) models these dependencies.
+- If the WFG contains a **cycle**, then deadlock exists.
+- This program uses **Depth-First Search (DFS)** to detect cycles in the graph.
+
+🛠️ How to Compile and Run:
+javac DeadlockDetection.java
+java DeadlockDetection
+
+🧪 Sample Input:
+Enter number of processes:
+4
+Enter number of dependencies (edges in wait-for graph):
+4
+Enter dependencies (process waiting for another process):
+0 → 1
+1 → 2
+2 → 3
+3 → 0
+
+🧾 Output:
+Deadlock Detected! Resolving by aborting a process.
+
+💡 Tip:
+Change inputs during the demo to show both deadlock and no-deadlock cases.

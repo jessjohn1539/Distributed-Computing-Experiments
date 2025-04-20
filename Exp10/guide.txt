@@ -1,0 +1,26 @@
+Experiment 10: Deadlock Detection using Path Pushing Algorithm in Java
+
+📘 Concept Notes:
+- Path Pushing is a distributed deadlock detection algorithm.
+- Each site shares part of its wait-for graph (WFG) with others.
+- If a cycle is formed across any site from shared paths, deadlock is detected.
+- This simulation simplifies the concept using Banker's-style matrices and simulates global view construction.
+
+🔧 Compilation & Execution Steps:
+1. Save the code in a file named PathPushingDeadlockDetection.java
+2. Open terminal/command prompt and navigate to the folder.
+3. Compile: javac PathPushingDeadlockDetection.java
+4. Run: java PathPushingDeadlockDetection
+
+✅ Practical Demonstration:
+- Allocation matrix represents currently held resources.
+- Request matrix represents additional requested resources.
+- Available array shows the remaining resources in the system.
+- If some processes cannot proceed and no safe sequence is found, a deadlock is reported.
+- Change available to {3,2,2} for safe execution.
+
+Example output (with deadlock):
+Deadlock Detected!
+
+Example output (safe state):
+No Deadlock. Safe state.
