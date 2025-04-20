@@ -1,0 +1,25 @@
+Experiment 6: Mutual Exclusion Algorithms
+
+🔍 Concept Notes:
+This experiment demonstrates how multiple processes avoid conflicts when accessing a shared resource in a distributed system.
+
+🔐 1. Maekawa's Algorithm (Voting-based Mutual Exclusion):
+Each process has its own voting set (a small group of other processes it needs permission from).
+To enter the critical section, a process asks for votes from all in its voting set.
+Only one process can hold a vote at a time. If it’s already voted, it denies new requests.
+Once the process gets all votes, it enters CS, does its work, and releases the votes after finishing.
+
+👉 Efficient because it avoids asking everyone, just a few selected processes.
+
+🕒 2. Lamport’s Algorithm (Timestamp-based Mutual Exclusion):
+Every process maintains a logical clock (just a number that increases).
+To enter the critical section, it sends a request with its timestamp to all other processes.
+Other processes reply immediately only if they aren’t already in or waiting for CS with a smaller timestamp.
+A process enters CS only when it gets replies from everyone.
+After finishing, it sends a release message to all, so others can continue.
+
+👉 Works like a queue based on timestamps. First-come, first-served.
+
+⚙️ Commands to Compile and Run:
+javac MutualExclusionDemo.java
+java MutualExclusionDemo
