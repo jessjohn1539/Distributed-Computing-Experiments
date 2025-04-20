@@ -1,0 +1,25 @@
+Experiment 1: Inter-Process Communication (IPC) using Sockets
+
+📝 Notes:
+- Low-level communication mechanism.
+- You manually send and receive bytes/messages via streams.
+- No method calls—just data transfer.
+- You must handle message formatting, protocols, and acknowledgments.
+- Example: Socket, ServerSocket, InputStream, OutputStream.
+👉 Think of it as two programs "talking" over a walkie-talkie using raw messages.
+
+⚙️ Setup & Run Instructions:
+1. Save your files:
+   - Producer.java
+   - Consumer.java
+
+2. Compile the Java files:
+   javac Consumer.java Producer.java
+
+3. Open two terminal windows.
+
+4. First, run the Consumer (Receiver) in one terminal:
+   java Consumer
+
+5. Then, run the Producer (Sender) in the second terminal:
+   java Producer

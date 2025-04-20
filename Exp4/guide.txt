@@ -1,0 +1,34 @@
+Experiment 4: Clock Synchronization using Java
+
+📌 Concept Notes:
+- In distributed systems, different nodes might have clocks that are not synchronized.
+- Clock synchronization ensures consistency across all nodes.
+- The master node calculates the average of its time and all slave times and instructs each slave how much to adjust.
+
+🧪 Steps in Code:
+1. Take the time from the master and each slave.
+2. Calculate average time = (master + sum of slave times) / (n+1).
+3. Find how much each slave needs to adjust to match average.
+4. Display final synchronized times.
+
+⚙️ Commands to Compile and Run:
+1. Save the file as: ClockSync.java
+2. Compile:
+   javac ClockSync.java
+3. Run:
+   java ClockSync
+
+👀 Example Input:
+Enter number of slave nodes: 2  
+Enter master time: 100  
+Enter time for Slave 1: 95  
+Enter time for Slave 2: 105  
+
+🧠 Output:
+Average Time: 100  
+Adjustment for Slave 1: +5  
+Adjustment for Slave 2: -5  
+Final Synchronized Times:
+Master: 100  
+Slave 1: 100  
+Slave 2: 100

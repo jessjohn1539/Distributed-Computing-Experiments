@@ -1,0 +1,21 @@
+Experiment 3: Group Communication using Multicast in Java
+
+📝 Concept Notes:
+- Group communication allows a sender to broadcast a message to multiple receivers simultaneously.
+- Java supports group messaging via MulticastSocket.
+- Useful in collaborative and real-time distributed systems.
+
+⚙️ Setup & Run Instructions:
+1. Save your file:
+   - CommSimulation.java
+
+2. Compile the Java files:
+   javac CommSimulation.java
+
+3. In terminal, run:
+   java CommSimulation
+
+📌 You'll see the sender broadcast a message and all receivers display it.
+
+🧠 Summary:
+This experiment demonstrates simple group communication using a multicast IP address and port, ideal for sending the same message to multiple nodes in a network.

@@ -1,0 +1,25 @@
+Experiment 2: Client/Server Application using RMI
+
+📝 Notes:
+- High-level abstraction for distributed communication in Java.
+- Methods can be invoked on remote objects across processes.
+- Java RMI handles the communication and object marshalling behind the scenes.
+- Example: Remote, UnicastRemoteObject, Naming.lookup()
+👉 Think of it as one program calling a method on an object hosted on another program—like a remote control.
+
+⚙️ Setup & Run Instructions:
+1. Save your files:
+   - RMI_Server.java
+   - RMI_Client.java
+
+2. Compile the Java files:
+   javac RMI_Server.java RMI_Client.java
+
+3. Start the RMI registry in background (from the same folder):
+   rmiregistry &
+
+4. Run the server in one terminal:
+   java RMI_Server
+
+5. Run the client in a second terminal:
+   java RMI_Client
